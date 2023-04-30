@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Shop - A sua loja de games</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container"> <!-- Essa primeira DIV foi criada apenas para o cabeçalho. Cria-se um container no header para centralizar o conteudo e fazer a distribuição do titulo do site na esquerda e do menu na direita-->
+            <h1>Game Shop</h1>
+            <nav>
+                <ul>
+                    <li> <a href="#about">Sobre a Loja</a></li> <!--#about COLOCADO NA PRIMEIRA SECTION vai linkar com a seção de SOBRE A LOJA-->
+                    <li> <a href="#contact">Contato</a></li> <!--#contact COLOCADO NA SEGUNDA SECTION vai linkar com a seção de FORMULARIO-->
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <section id="about"> <!--Seção para colocar o conteudo do site dentro do container:seções, imagens, paragrafos e títulos-->
+        <div class="container"> <!--Teremos duas colunas: a da esquerda será a faixada da loja e da da direita o "Sobre a Loja"-->
+            <img class="store-front" src="./imagens/loja.jpg" alt="Fachada da Loja Game Shop" />
+            <div> <!-- Essa DIV será o container do conteudo do texto com a descrição "Sobre a Loja"-->
+                <h2>Sobre a Loja</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, at. Aut quaerat, totam tempore aspernatur rem, delectus facere voluptates nostrum velit, perspiciatis id! Inventore ducimus necessitatibus unde assumenda sed soluta!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum placeat, dicta illo dolore consectetur odit ut nihil enim nemo, aliquam aliquid, nobis ab veniam optio? Quia consequuntur dolores perspiciatis temporibus!</p>
+                <ul class="brands-list"> <!--Criou essa lista não ordenada para colocar os logos (imagens) e uma classe nessa lista para formatar as imagens-->
+                    <li><img src="./imagens/nintendo.png" alt="Nintendo"></li>
+                    <li><img src="./imagens/xbox.png" alt="Xbox"></li>
+                    <li><img src="./imagens/playstation.png" alt="Playstation"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="contact"> <!--foi necessário criar essa ID para diferencia dos containers anteriores na hora da estilização do CSS. Criou uma regra propria.-->
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-methods"> <!--para que apenas o formulario ficasse alinhado ao <h2>Contato</h2> na estilização do CSS-->
+                <div>
+                    <h3>Fale Conosco</h3>
+                    <form>
+                        <input type="text" placeholder="Seu Nome" required /> <!--REQUIRED sinalizando que é obrigatório o prenchimento. Se não preencher e clicar em enviar será indicado que aquele campo em branco precisa ser preenchido-->
+                        <input type="email" placeholder="Seu Email" required />
+                        <input type="Tel." placeholder="Seu Telefone (opcional)" />
+                        <textarea placeholder="Sua Mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div>
+                    <h3>Nos Acompanhe</h3>
+                    <ul class="social-link"> <!--será feito os mesmos procedimentos das imagens anteriores-->
+                        <li>
+                            <a href="#" title="Sigam-nos no Instagram">
+                                <img src="./imagens/instagram.png" alt="Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Sigam-nos no Facebook">
+                                <img src="./imagens/facebook.png" alt="Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Visite nosso canal no Youtube">
+                                <img src="./imagens/youtube.png" alt="Youtube">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Venham até nós</h3>
+                    <p>Rua Javascript, n°124, Vila HTML, São Paulo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy;Games Shop - Todos os direitos reservados - 2023
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

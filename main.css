@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box; /*border-box aplicado para todos os elementos da tela*/
+    margin: 0;              /* foram removidos as margens e o padding para o navegador não plicar a um padrão*/
+    padding: 0;             /* qdo fazemos essa alteração damos o nome de RESET e sempre bom começar com ele*/
+}
+
+/*DA ALTERAÇÃO DAS FONTES: TITULOS, TEXTOS, DESCRITORES, LINKS....
+1. Acessar o site: https://fonts.google.com
+2. Escolher o tipo de fonte:ROBOTO (estilo Regular 400) e BUNGEE (estilo Regular 400);
+3. Copia o Link e Colar no HEAD do html
+4. Realiza a Estilização no CSS copiando no site o caminho conforme abaixo em HEADER.*/ 
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* ESTILIZAÇÃO DO HEADER EM BODY*/
+
+/*DICAS SOBRE A ESTILIZAÇÃO DO HEADER - CABEÇALHO*/
+header {
+    padding: 16px 0; /*espaçamento interno de 16px e 0 nas laterais*/
+    background-color: #182c61; /*cor do fundo do cabeçalho*/
+    color: #ecf0f1; /*cor do texto do cabeçalho*/
+}
+
+header,
+section h2,
+section h3,
+form button {                       /*caso a fonte fique ainda diferente, como nesse caso que ficou muito gordinha, podemos personalizar da seguinte forma:*/
+    font-family: 'Bungee', cursive;  /*Clica com o botão direito do mouse >> vai em inspecionar >> "folha de estilos de agente de usuário" que é o CSS padrão que o navegador aplicou>>;*/
+    font-weight: normal;                        /*>> em font-weight: bold (que deixou a letra mais gordinha e ilegivel) >> em filtrar escreva "font-weight: normal" >> add esse comando ao CSS no VS Code em header h1*/
+}
+
+body, input, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*ESTILIZAR OS LINKS DO CABEÇALHO*/
+header nav li{
+    display: inline;        /*eles devem se apresentar dentro do mesmo bloco e na mesma linha, um ao lado do outro.*/
+    margin-left: 16px;      /*para separar os links*/
+    color: #ecf0f1;       /*se colocar a cor do texto dessa forma não funciona, pois esta alterando o <li>, o que tem ser alterado ´apenas o link, ou seja na tag <a>. Veja abaixo*/
+    font-size: 18px;        /* aumentou o tamanho da letra dos links*/
+}                             
+
+header h1,
+section h2 {       /*Regra para deixar a letra mais nitida, nesse caso aqui foi afinar mais*/
+    font-weight: normal;
+}
+
+header nav li a {
+    color: #ecf0f1;  /*agora foi alterado o link na tag<a> dentro da tag<li>*/
+    text-decoration: none; /*retirar as linhas abaixo dos links*/
+}
+
+/*ESTILIZAR O CONTAINER NA HEADER*/
+.container {
+    max-width: 1280px;
+    width: 100%; /*ele vai ocupar 100% da largura até atingir os 1280px centralizando*/
+    margin: 0 auto; /* 0 (superior e inferior) e laterais (auto)*/
+}
+
+/*COLOCAR O TITULO DO SITE LADO A LADO DOS LINKS*/
+header .container { 
+    display: flex;
+    align-items: center; /* vai centralizar os links na vertical dentro da caixa*/
+    justify-content: space-between; /*vai separar os links de navegação do titulo do cabeçalho jogando os mesmo para a esquerda*/
+    
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*SEÇÃO SOBRE O SITE - PRIMEIRA TAG SECTION EM BODY*/
+
+/*DAS IMAGENS DA LOGO (CLASSE UL BRANDS-LIST) - NINTENDO, XBOX E PLAYSTATION*/
+
+.brands-list img{ /*img, pq só quero mexer no tamanho das imagens*/
+    height: 24px; /*dessa forma reduziu o tamanho das imagens*/
+}
+
+.brands-list li{
+    display: inline;
+}
+
+/*DA ESTILIZAÇÃO DA TAG SECTION*/
+
+section .container{
+    display:flex; /*Dessa forma, assim como nos links do cabeçalho, alinhamos o texto para o lado da imagem da fachada*/
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/*DA PARTE DOS ESPAÇAMENTOS DAS IMAGENS COM O TOPO (CABEÇALHO) E DAS IMAGENS COM OS TEXTOS*/
+
+/*Primeiro: separar do cabeçalho*/
+
+section {
+    padding: 24px 0; /*espaçamento de 24px para topo de fundo e 0 para esquerda e direita*/
+    color: #182c61;
+}
+
+/*Segundo: dos Titulos H2, H3.... de paragrafos, imagens, etc... para não ficar colados*/
+section h2{
+    margin-bottom: 16px; /*usou margin-bottom pois o espaçamento é na parte inferior*/
+    color: #182c61;
+}
+
+/*Terceiro: separar os paragrafos*/
+section p{
+    margin-bottom: 8px;
+    color: #182c61;
+}
+
+/*quarto: separar a imagem do texto*/
+.store-front{
+    margin-right: 32px; /* se fizer apenas este comando com a seção section img (como no exemplo abaixo), além de separar a imagem do texto, também vai separar as logo, então cria-se uma classe HTML na img da Fachada da Loja*/
+}
+/*section img{
+    margin-right: 32px; 
+} */
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* DO FORMULÁRIO, DO CONTATO - SEGUNDA TAG SECTION BODY*/
+
+/*DAS ESTILIZAÇÃO DAS IMAGENS DAS REDES SOCIAIS*/
+.social-link img{
+    height: 24px;
+}
+
+/*DA ESTILIZAÇÃO DO ID SECTION CONTAINER E DA CLASS DIV CONTACT-METHODS*/
+
+#contact .container{
+    display: block; /*faz com que o elemento HTML seja renderizado como bloco, tal como os parágrafos e os cabeçalhos o são.*/
+}
+
+.contact-methods{
+    display: flex; /*O display: flex funciona de uma maneira diferente dos outros displays. Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    justify-content: space-between; /*separar e pode ser usado pode ser usado para ocupar todo o espaço livre após a disposição dos itens e dividí-lo igualmente entre os itens, para que haja a mesma quantidade de espaço entre cada elemento.*/
+}
+
+/*DA ESTILIZAÇÃO DO FORMULÁRIO*/
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea {
+    resize: none; /*utilizado para que o cliente não altere o tamanho do textarea e com isso quebrar o layout da pagina*/
+    height: 180px;
+}
+
+form button{
+    background-color: #182c61;
+    color: #fff;
+    border: none;
+    cursor: pointer; /*esse comando muda o cursor do mouse de setinha para maozinha, o que facilita a leitura de que é para clicar ali*/
+}
+
+form button:hover{
+    background-color: #314e9e;
+}
+
+input:focus, textarea:focus{   /*Para quando clicar no link de preenchimento do formulário, a borda adquirir a cor aqui selecionada*/
+    outline-color: #182c61;
+}
+
+/*DA ESTILIZAÇÃO DOS LINKS DAS REDES SOCIAIS*/
+.social-link li{
+    display: inline;
+    margin-right: 8px;
+}
+
+.social-link li a{
+    text-decoration: none; /* isso foi aplicado por ficou as bolinhas da lista embaixo das imagens, pois estava underline na configuração, e mudamos para none*/
+}
+
+section h3{
+    margin-bottom: 16px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*DA ESTILIZAÇÃO DO RODAPÉ - DA TAG FOOTER*/
+footer{
+    background-color: #182c61;
+    color:#ecf0f1;
+    padding: 16px 0;
+}
